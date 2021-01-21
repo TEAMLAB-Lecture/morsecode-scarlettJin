@@ -163,7 +163,8 @@ def get_cleaned_english_sentence(raw_english_sentence):
     raw_english_sentence= raw_english_sentence.strip()
     morses = get_morse_code_dict()
     for alpha in raw_english_sentence:
-        if alpha.isalpha() or alpha ==" ":
+        
+        if alpha not  in ['.',',','!','?']:
             result += alpha
 
     return result
@@ -296,7 +297,7 @@ def encoding_sentence(english_sentence):
 
 
 def main():
-    print("Morse Code Program!!")
+    ABC = get_cleaned_english_sentence("Thisis CS50.")
     user_input = input("Input your message(H - Help, 0 - Exit):")
     # ===Modify codes below=============
     while True:
