@@ -132,7 +132,7 @@ def is_validated_morse_code(user_input):
 
     morse_code = get_morse_code_dict()
     for code in code_list:
-        if not code in morse_code.values() and code !="":
+        if code not in morse_code.values() and code !="":
             return False
 
     return True
@@ -296,6 +296,7 @@ def encoding_sentence(english_sentence):
     # ==================================
 
 def main():
+    print("Morse Code Progam!!")
     user_input = input("Input your message(H - Help, 0 - Exit):")
     # ===Modify codes below=============
     while True:

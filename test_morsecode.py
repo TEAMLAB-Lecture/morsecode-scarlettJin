@@ -3,8 +3,10 @@
 import unittest
 import morsecode as mc
 
-from mock import patch
+from unittest.mock import patch
 from io import StringIO
+
+
 
 class TestMorseCode(unittest.TestCase):
 
@@ -167,3 +169,5 @@ class TestMorseCode(unittest.TestCase):
         }
         return morse_code
 
+if __name__ == '__main__':
+        unittest.main()
